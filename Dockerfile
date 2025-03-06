@@ -1,5 +1,5 @@
 # Use a minimal Node.js image
-FROM node:22.14.0-alpine
+FROM node:14
 
 # Install dependencies required for compiling native modules
 RUN apk update && apk add --no-cache \
