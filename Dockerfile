@@ -13,7 +13,7 @@ WORKDIR /app
 
 # Copy only package.json and install dependencies
 COPY package.json ./
-RUN npm install --only=production
+RUN npm install
 
 # Copy server.js to the container
 COPY server.js ./
