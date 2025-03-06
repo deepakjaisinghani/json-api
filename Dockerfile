@@ -1,15 +1,19 @@
 # Use a minimal Node.js image
 FROM node:22.14.0-alpine
 
-# Install curl (and any other dependencies you may need)
-RUN apk update && apk add --no-cache curl
+# Install dependencies required for compiling native modules
+RUN apk update && apk add --no-cache \
+    curl \
+    python3 \
+    make \
+    g++    # Installing additional build tools
 
 # Set the working directory
 WORKDIR /app
 
 # Copy only package.json and install dependencies
 COPY package.json ./
-RUN npm install
+RUN npm install --only=production
 
 # Copy server.js to the container
 COPY server.js ./
