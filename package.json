@@ -1,7 +1,7 @@
 {
   "name": "json-api",
   "version": "1.0.0",
-  "description": "Json API",
+  "description": "json-output",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
@@ -11,7 +11,8 @@
     "multer": "^1.4.5"
   },
   "devDependencies": {
-    // Add dev dependencies here if needed
+    // Remove any dev dependencies or ensure they're properly formatted
+    "some-dev-package": "^1.0.0"
   },
   "author": "Your Name",
   "license": "ISC"
