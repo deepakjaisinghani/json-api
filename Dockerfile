@@ -2,11 +2,7 @@
 FROM node:14
 
 # Install dependencies required for compiling native modules
-RUN apk update && apk add --no-cache \
-    curl \
-    python3 \
-    make \
-    g++    # Installing additional build tools
+RUN apk update && apk add --no-cache curl
 
 # Set the working directory
 WORKDIR /app
